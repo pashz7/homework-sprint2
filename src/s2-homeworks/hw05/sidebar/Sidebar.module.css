@@ -1,25 +1,70 @@
 .sidebar {
+    position: fixed;
+    left: -317px; /* скрыт за левым краем */
+
+    display: flex;
+    flex-direction: column;
+    width: 317px;
+    height: 720px;
+    background: #fff;
+    gap: 23px;
+    align-items: center;
+    padding-right: 24px;
+    padding-top: 16px;
+    transition: left 0.3s ease;
+    z-index: 1001; /* ВЫШЕ чем background */
 }
 
 .sidebar.open {
+    left: 0; /* появляется на экране */
+    box-shadow: 0 1px 2px 0 rgba(29, 33, 38, 0.1), 0 10px 40px 0 rgba(29, 33, 38, 0.13);
 }
 
 .background {
+    position: fixed; /* fixed вместо relative */
+    top: 0;
+    left: 0;
+    width: 100vw; /* на всю ширину */
+    height: 100vh; /* на всю высоту */
+    background: #000;
+    opacity: 0.3;
+    z-index: 1000; /* НИЖЕ чем sidebar */
 }
 
 .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
 }
 
 .nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 22px;
 }
 
 .nav a:hover {
+    font-weight: 600;
+    font-size: 22px;
+    color: #3d6b99;
 }
 
+
 .nav a.active {
+    text-decoration: underline;
 }
+
+
 .close {
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+
 }
 
 .close img {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
 }

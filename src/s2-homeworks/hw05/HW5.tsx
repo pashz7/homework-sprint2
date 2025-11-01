@@ -13,7 +13,7 @@ function HW5() {
     return (
         <HashRouter>
             {/*в gh-pages лучше работает HashRouter, с BrowserRouter скорее всего не пройдёт тест*/}
-            <Layout>
+            <Layout >
                 <Pages />
             </Layout>
         </HashRouter>

@@ -5,10 +5,15 @@
 }
 
 .watch {
+    width: 200px;
+    border: 1px solid red;
 }
 
 .watch strong {
 }
 
 .more {
+    width: 200px;
+    border: 1px solid red;
+
 }
